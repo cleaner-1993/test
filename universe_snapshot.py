@@ -153,7 +153,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         '--out-dir',
         type=Path,
-        default=Path('/home/runner/work/test/test/universe_snapshot'),
+        default=Path(__file__).resolve().parent / 'universe_snapshot',
         help='Output directory inside repository.',
     )
     parser.add_argument('--batch-size', type=int, default=25)
